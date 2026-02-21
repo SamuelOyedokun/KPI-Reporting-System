@@ -1,6 +1,6 @@
 # 📊 KPI Intelligence Center — Automated Sales Reporting System
 
-A production-grade, fully automated business intelligence pipeline built with Python, SQL Server, and Streamlit. Extracts 2,800+ real sales transactions, calculates executive-level KPIs, generates PDF reports, and delivers them via scheduled email — all from a single command.
+This project started with a simple question: what if a business never had to manually pull a report again? The KPI Intelligence Center is the answer — a fully automated analytics pipeline that extracts 2,800+ real sales transactions from SQL Server, computes 12 executive-level KPIs, and delivers a formatted PDF report to stakeholders via scheduled email, every single day without human intervention. Built end-to-end in Python across five layers — database, ETL engine, KPI computation, PDF/email automation, and a live Streamlit dashboard deployed online — this system covers the complete BI workflow that companies hire data analysts and BI engineers to build. It doesn't just show numbers; it tells the story behind them, across 19 countries, 7 product lines, and 3 years of sales history.
 
 ## 🔗 Live Dashboard
 👉 **[View Live Dashboard](https://kpi-reporting-system-ifxehqzoojyy5g6qcsvob8.streamlit.app/)**
