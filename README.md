@@ -25,6 +25,7 @@ calculates KPIs, generates PDF reports, and delivers them via email on a schedul
 - 📅 Monthly Revenue Trends (2003–2005)
 
 ## 🛠️ Tech Stack
+
 | Tool | Purpose |
 |------|---------|
 | Python | Core language |
@@ -38,7 +39,7 @@ calculates KPIs, generates PDF reports, and delivers them via email on a schedul
 | python-dotenv | Environment config |
 
 ## 📁 Project Structure
-\`\`\`
+```
 kpi-reporting-system/
 ├── etl/
 │   ├── extract.py        # Database extraction
@@ -57,35 +58,36 @@ kpi-reporting-system/
 │   └── config.yaml
 ├── main.py               # Central menu
 └── requirements.txt
-\`\`\`
+```
 
 ## ⚙️ Setup Instructions
+
 1. Clone the repo:
-\`\`\`
+```
 git clone https://github.com/oyedonsam100/KPI-Reporting-System.git
-\`\`\`
+```
 2. Create virtual environment:
-\`\`\`
+```
 python -m venv venv
-\`\`\`
+```
 3. Activate it:
-\`\`\`
+```
 venv\Scripts\Activate.ps1
-\`\`\`
+```
 4. Install dependencies:
-\`\`\`
+```
 pip install -r requirements.txt
-\`\`\`
+```
 5. Create `.env` file with your credentials
 6. Run:
-\`\`\`
+```
 python main.py
-\`\`\`
+```
 
 ## 🔒 Security Note
 The `.env` file containing credentials is excluded via `.gitignore`
 and is never committed to GitHub.
 
 ## 👤 Author
-Samuel Oyedokun
+**Samuel Oyedokun**
 [GitHub](https://github.com/oyedonsam100)
