@@ -28,4 +28,4 @@ jobs:
           EMAIL_RECEIVER:  ${{ secrets.EMAIL_RECEIVER }}
           EMAIL_RECEIVER2: ${{ secrets.EMAIL_RECEIVER2 }}
           EMAIL_RECEIVER3: ${{ secrets.EMAIL_RECEIVER3 }}
-        run: python reports/email_report.py
+        run: python reports/email_report_cloud.py
