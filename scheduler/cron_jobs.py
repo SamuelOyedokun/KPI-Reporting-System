@@ -8,33 +8,22 @@ from datetime import datetime
 from reports.email_report import send_kpi_email
 
 def job():
-    print(f"\n⏰ Scheduler triggered at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    send_kpi_email()
-    print("✅ Job complete. Waiting for next run...\n")
+    print(f"\n🕐 Scheduled job triggered — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    try:
+        send_kpi_email()
+        print(f"✅ Job complete — next run scheduled\n")
+    except Exception as e:
+        print(f"❌ Job failed: {e}\n")
 
-# ── Schedule Options (uncomment the one you want) ───────────
-
-# Every day at 8:00 AM
+# ── Schedule: Every day at 08:00 AM ─────────────────────────
 schedule.every().day.at("08:00").do(job)
 
-# Every Monday at 9:00 AM
-# schedule.every().monday.at("09:00").do(job)
+print("🚀 KPI Scheduler Running on Render")
+print(f"📅 Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+print("📧 Reports scheduled: Daily at 08:00 AM")
+print("─" * 45)
 
-# Every hour
-# schedule.every().hour.do(job)
-
-# Every 30 minutes (good for testing)
-# schedule.every(30).minutes.do(job)
-
-print("🚀 KPI Report Scheduler started!")
-print(f"   Next report will be sent at 08:00 daily")
-print("   Press Ctrl+C to stop\n")
-
-# ── Run immediately once for testing ────────────────────────
-print("📤 Running once immediately for testing...")
-job()
-
-# ── Keep Running ─────────────────────────────────────────────
+# ── Keep alive forever ───────────────────────────────────────
 while True:
     schedule.run_pending()
     time.sleep(60)

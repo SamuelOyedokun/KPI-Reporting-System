@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: kpi-scheduler
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python scheduler/cron_jobs.py
+    envVars:
+      - key: EMAIL_SENDER
+        sync: false
+      - key: EMAIL_PASSWORD
+        sync: false
+      - key: EMAIL_RECEIVER
+        sync: false
+      - key: EMAIL_RECEIVER2
+        sync: false
+      - key: EMAIL_RECEIVER3
+        sync: false
